@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+header,
+section,
+aside,
+footer {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+header {
+  background-color: red;
+  width: 100%;
+}
+
+.container .paragraf {
+  background-color: blue;
+  flex-basis: 50%;
+}
+
+.aside-right {
+  background-color: pink;
+  flex-basis: 25%;
+}
+
+.aside-left {
+  background-color: green;
+  flex-basis: 25%;
+}
+footer {
+  background-color: violet;
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .aside-left {
+    order: 3;
+    flex-basis: 100%;
+  }
+  .aside-right {
+    flex-basis: 30%;
+  }
+  .container .paragraf {
+    flex-basis: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .paragraf,
+  .aside-right,
+  .aside-left {
+    flex-basis: 100%;
+  }
+  .aside-right {
+    order: 3;
+  }
+  .aside-left {
+    order: 2;
+  }
+}
